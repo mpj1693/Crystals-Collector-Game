@@ -19,10 +19,10 @@ $(document).ready(function () {
     randomNumber = Math.floor(Math.random() * 100) + 10;
     $(".random-number").text(randomNumber)
 
-    var redGem = Math.floor(Math.random() * 10) + 1;
-    var blueGem = Math.floor(Math.random() * 10) + 1;
-    var whiteGem = Math.floor(Math.random() * 10) + 1;
-    var orangeGem = Math.floor(Math.random() * 10) + 1;
+    redGem = Math.floor(Math.random() * 10) + 1;
+    blueGem = Math.floor(Math.random() * 10) + 1;
+    whiteGem = Math.floor(Math.random() * 10) + 1;
+    orangeGem = Math.floor(Math.random() * 10) + 1;
 
     yourTotal = 0;
     $(".your-total").text(yourTotal)
@@ -47,7 +47,7 @@ $(document).ready(function () {
     reset();
   }
 
-  $("#red-gem").on('click', function () {
+  $(".red-gem").on('click', function () {
     yourTotal += redGem;
     $(".your-total").text(yourTotal)
 
@@ -66,7 +66,7 @@ $(document).ready(function () {
     )
   })
 
-  $("#blue-gem").on('click', function () {
+  $(".blue-gem").on('click', function () {
     yourTotal += blueGem;
     $(".your-total").text(yourTotal)
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
     )
   })
 
-  $("#white-gem").on('click', function () {
+  $(".white-gem").on('click', function () {
     yourTotal += whiteGem;
     $(".your-total").text(yourTotal)
 
@@ -104,7 +104,7 @@ $(document).ready(function () {
     )
   })
 
-  $("#orange-gem").on('click', function () {
+  $(".orange-gem").on('click', function () {
     yourTotal += orangeGem;
     $(".your-total").text(yourTotal)
 
