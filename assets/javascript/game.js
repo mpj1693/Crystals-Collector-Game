@@ -1,28 +1,127 @@
-var wins = 0;
-var losses = 0;
-var randomNumber = 0;
-var yourTotal = 0;
-var redGem = 0;
-var blueGem = 0;
-var whiteGem = 0;
-var orangeGem = 0;
+$(document).ready(function () {
 
-//generate the random number
-
-function newGame() {
-
-  randomNumber = Math.floor(Math.random() * 100);
-  console.log(randomNumber)
+  var randomNumber = Math.floor(Math.random() * 100) + 10;
   $(".random-number").text(randomNumber)
 
-  wins = 0;
-  losses = 0;
-  yourTotal = 0;
-  redGem = 0;
-  blueGem = 0;
-  whiteGem = 0;
-  orangeGem = 0;
+  var redGem = Math.floor(Math.random() * 10) + 1;
+  var blueGem = Math.floor(Math.random() * 10) + 1;
+  var whiteGem = Math.floor(Math.random() * 10) + 1;
+  var orangeGem = Math.floor(Math.random() * 10) + 1;
 
-}
+  var yourTotal = 0;
+  var wins = 0;
+  var losses = 0;
+  $(".your-total").text(yourTotal)
+  $(".wins").text(wins)
+  $(".losses").text(losses)
 
-$("#new-game").on('click', newGame);
+  function reset() {
+    randomNumber = Math.floor(Math.random() * 100) + 10;
+    $(".random-number").text(randomNumber)
+
+    var redGem = Math.floor(Math.random() * 10) + 1;
+    var blueGem = Math.floor(Math.random() * 10) + 1;
+    var whiteGem = Math.floor(Math.random() * 10) + 1;
+    var orangeGem = Math.floor(Math.random() * 10) + 1;
+
+    yourTotal = 0;
+    $(".your-total").text(yourTotal)
+    console.log(
+      "Random Number in reset " + randomNumber +
+      "   your total in reset " + yourTotal
+    )
+   
+  }
+
+  function youWon() {
+    alert("You Won.");
+    wins++;
+    $(".wins").text(wins);
+    reset();
+  }
+
+  function youLose() {
+    alert("You Lose.");
+    losses++;
+    $(".losses").text(losses);
+    reset();
+  }
+
+  $("#red-gem").on('click', function () {
+    yourTotal += redGem;
+    $(".your-total").text(yourTotal)
+
+    if (yourTotal == randomNumber) {
+      youWon();
+    } else if (yourTotal > randomNumber) {
+      youLose();
+    }
+    console.log(
+      "Random Number in gem " + randomNumber +
+      "   your total in gem " + yourTotal + 
+      "   Red Gem " + redGem +
+      "   Blue Gem " + blueGem +
+      "   White Gem " + whiteGem + 
+      "   Orange Gem " + orangeGem
+    )
+  })
+
+  $("#blue-gem").on('click', function () {
+    yourTotal += blueGem;
+    $(".your-total").text(yourTotal)
+
+    if (yourTotal == randomNumber) {
+      youWon();
+    } else if (yourTotal > randomNumber) {
+      youLose();
+    }
+    console.log(
+      "Random Number in gem " + randomNumber +
+      "   your total in gem " + yourTotal + 
+      "   Red Gem " + redGem +
+      "   Blue Gem " + blueGem +
+      "   White Gem " + whiteGem + 
+      "   Orange Gem " + orangeGem
+    )
+  })
+
+  $("#white-gem").on('click', function () {
+    yourTotal += whiteGem;
+    $(".your-total").text(yourTotal)
+
+    if (yourTotal == randomNumber) {
+      youWon();
+    } else if (yourTotal > randomNumber) {
+      youLose();
+    }
+    console.log(
+      "Random Number in gem " + randomNumber +
+      "   your total in gem " + yourTotal + 
+      "   Red Gem " + redGem +
+      "   Blue Gem " + blueGem +
+      "   White Gem " + whiteGem + 
+      "   Orange Gem " + orangeGem
+    )
+  })
+
+  $("#orange-gem").on('click', function () {
+    yourTotal += orangeGem;
+    $(".your-total").text(yourTotal)
+
+    if (yourTotal == randomNumber) {
+      youWon();
+    } else if (yourTotal > randomNumber) {
+      youLose();
+    }
+
+    console.log(
+      "Random Number in gem " + randomNumber +
+      "   your total in gem " + yourTotal + 
+      "   Red Gem " + redGem +
+      "   Blue Gem " + blueGem +
+      "   White Gem " + whiteGem + 
+      "   Orange Gem " + orangeGem
+    )
+  })
+
+})
