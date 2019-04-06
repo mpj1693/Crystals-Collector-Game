@@ -1,6 +1,6 @@
 # Crystals-Collector-Game
 
-###Link: https://mpj1693.github.io/Crystals-Collector-Game/
+### Link: https://mpj1693.github.io/Crystals-Collector-Game/
 
 ### Overview
 
