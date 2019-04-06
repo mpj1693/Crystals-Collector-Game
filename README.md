@@ -1,5 +1,7 @@
 # Crystals-Collector-Game
 
+###Link: https://mpj1693.github.io/Crystals-Collector-Game/
+
 ### Overview
 
 In this game you have to add your total and match it to the total randomly chosen by computer. It has same logic as the card game - BlackJack.
